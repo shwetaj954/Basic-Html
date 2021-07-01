@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input</title>
+	<style>
+	.bd{
+		margin:5% 20%;
+		height:400px;
+		background-color:#fffdd0;
+		border:solid;
+		border-color:blue;
+		color:blue;
+	}
+	.pt{
+		background-color:blue;
+		color:white;
+		text-align:center;
+		
+		}
+	</style>
+</head>
+<body style="background-color:skyblue;">
+<div class="bd" >
+<h1 class="pt" style="margin-top:0;">JawaScript Prompt Example</h1>
+<b style="color:brown;">Click This Buttons...</b>
+<button id="name" class="pt" style="height:30px;">Name</button>
+<button id="city" class="pt" style="height:30px;">City</button>
+<p style="font-size:30px;">
+Your Name is <span id="outputName" style="color:red;">____</span>. The city in which you live is <span id="outputCity" style="color:red;">____</span>.
+</p>
+</div>
+<script>
+document.getElementById("name").onclick = function(){
+	var name = prompt("Enter your name");
+  document.getElementById("outputName").innerText = name;
+}
+
+document.getElementById("city").onclick = function(){
+	var city = prompt("Enter your city");
+  document.getElementById("outputCity").innerText = city;
+}
+</script>
+</body>
+</html>

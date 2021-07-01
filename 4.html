@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Login page</title>
+	<style>
+		h1{
+			text-align:center;
+			color:white;
+			background-color:red;
+			margin:0;
+			height:50px;
+			
+		}
+		.bd{
+			background-color:skyblue;
+			margin:5% 20%;
+			border:solid;
+			border-color:red;
+			box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+			height:400px;
+		}
+		.fo{
+			margin:2% 30%;
+			
+		}
+		.btp{
+			background-color:red;
+			border-color:white;
+			color:white;
+			height:30px;
+		}
+		.btp:hover{
+			background-color:white;
+			border-color:red;
+			color:red;
+			}
+		.tx{
+			border-color:red;
+			height:30px;
+			width:200px;
+			}
+
+	</style>
+    </head>
+    <body>
+       
+	<div class="bd">
+	 <h1>Login Page</h1><br><br>
+        <form name="login" class="fo">
+	<table style="color:blue;">
+  <tr>
+    <th>Username</th>
+    <th><input class="tx" type="text" name="userid"/></th>
+ 
+  </tr>
+  <tr>
+    <td> Password</td>
+    <td> <input class="tx" type="password" name="pswrd"/><br></td>
+   
+  </tr>
+  <tr>
+    <td></td>
+    <td><input class="btp" type="button" onclick="check(this.form)" value="Login"/>&nbsp<input type="reset" class="btp" value="Cancel"/></td>
+    
+  </tr>
+  
+</table>
+                     
+        </form>
+	<br><br>
+	</div>
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "shweta" && form.pswrd.value == "mypswrd") {
+                    window.open('1.html')/*opens the target page while Id & password matches*/
+                }
+                else {
+                    alert("Error Password or Username")/*displays error message*/
+                }
+            }
+        </script>
+    </body>
+</html>
